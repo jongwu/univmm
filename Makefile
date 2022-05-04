@@ -22,4 +22,5 @@ univmm.o: univmm.c
 	$(CC) $(CFLAG) $@ $<
 
 clean:
-	rm $(OBJ)
+	rm univmm.o univmm test.bin
+	make -C arch/$(ARCH)/ clean
